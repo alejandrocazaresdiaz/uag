@@ -7,19 +7,18 @@ import java.util.Stack;
  *
  * @author Alejandro Cazares
  */
-public class HomeWork {
+public class Parentheses1 {
 
     public Set<String> valids = new HashSet<String>();
     
     public static void main(String...args) {
-        //Parentheses test...modify to...javac HomeWork
         LinkedList<Character> combination = new LinkedList<Character>();
         int nPairs = Integer.parseInt(args[0]);
         for(int i=0; i<nPairs; i++){
             combination.add('(');
             combination.add(')');
         }
-        HomeWork test = new HomeWork();
+        Parentheses1 test = new Parentheses1();
         test.parenthesesGenerator("", combination);
         System.out.println(test.valids.toString().replace("[", "").replace("]", ""));
     }
